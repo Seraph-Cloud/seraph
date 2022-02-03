@@ -14,3 +14,6 @@ pandas
 mplfinance
 Nasdaq-Data-Link
 pyqt5
+jupyter-lab
+chart_studio
+cufflinks
