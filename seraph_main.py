@@ -22,6 +22,9 @@ import requests
 import os
 import time
 import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import pyqtSlot
 # ADD UI CODE HERE ########################
 ## 1) Progress Bar
 ## 2) Image as URL

@@ -20,7 +20,9 @@ import requests
 import os
 import time
 import sys
-import PyQt
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import pyqtSlot
 ###########################################
 # Twelvedata Token
 SELECTED_TOKEN = input("What Token:")
