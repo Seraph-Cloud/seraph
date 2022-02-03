@@ -3,6 +3,7 @@
 # without the time.sleep(30) or time.sleep(60)
 # this module consumes lots of API uses at TwelveData
 #
+from seraph_vars import TOKEN1
 from seraph_vars import *
 import plotly.graph_objects as go  # or plotly.express as px
 import nasdaqdatalink
@@ -23,26 +24,36 @@ import sys
 ###########################################
 # Symbol Selection
 ###########################################
-ticker_symbol = input("What Ticker: (Please Write In Quotes " "):")
+ticker_symbol = input("What Ticker:")
 # WRITE TO FILE
-sys.stdout_pid = open('seraph_pid.txt', "w")
-print(ticker_symbol)  # DO NOT UNCOMMENT
+f = open('seraph_pid.txt', "w")
+f.write(
+        ticker_symbol
+)
+f.close()
+#print(ticker_symbol)  # DO NOT UNCOMMENT
 print("Ticker is:" + ticker_symbol)
 ############################################
 # Twelvedata Token
 token_selected = input("What Token (TOKEN1,TOKEN2,TOKEN3,TOKEN4)?:")
-# WRITE TO FILE
-sys.stdout_token = open('selected_token.txt', "w")
-print(token_selected)  # DO NOT UNCOMMENT
-print("Token Selected:" + token_selected)
-# READING THE SELECTED TOKEN
-f = open('selected_token.txt', 'r')
-toksel = f.read()
-print("Token Selected:",
-      toksel
-      )
-td = TDClient(apikey=toksel)
+## WRITE TO FILE
+f = open('selected_token.txt', "w")
+f.write(
+        token_selected
+)
+#print(token_selected)  # DO NOT UNCOMMENT
 f.close()
+print("Token Selected:" + token_selected)
+## READING THE SELECTED TOKEN
+f = open('selected_token.txt', 'r')
+f.read()
+print("Token Selected:",
+      tok_sel
+      )
+# define which token
+td = TDClient(apikey=tok_sel)
+
+###################################################################
 print("Imported API key....")
 ###################################################################
 ###################################################################
@@ -73,7 +84,7 @@ time.sleep(30)
 ts = td.time_series(
         symbol=ticker_symbol,
         interval="1min",
-        outputsize=120,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/1min/chart_1min_2.min.png")
+        outputsize=120,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/1min/chart_1min_2.png")
 time.sleep(30)
 symbol = ticker_symbol
 imagename = "%s_1min_2.png" % symbol
@@ -125,3 +136,5 @@ ts = td.time_series(
 time.sleep(30)
 print("Finished Plotting")
 print("Image File can be located at data/images/time_series_plots")
+f.close()
+f.close()
