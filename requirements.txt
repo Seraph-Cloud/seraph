@@ -19,3 +19,4 @@ chart_studio
 cufflinks
 bokeh
 bqplot
+finvizfinance
