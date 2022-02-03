@@ -20,14 +20,11 @@ def get_tid(data):
 get_pid = open('seraph_pid.txt')
 print(get_pid)
 pid = print(get_pid)
-
-## one of the above should work...
-#import asyncio
 # JAVA SCRIPT OBJECT ORIENTATION
 if not os.path.exists("data/json"):
     os.mkdir("data/json")
 # TOKENS
-td = TDClient(apikey=TOKEN1)
+td = TDClient(apikey=TOKEN2)
 
 path_calls = var.options_calls(
     'options-calls-' > '%s.json % pid')  # " % s.json" % pid
@@ -37,7 +34,7 @@ path_puts = var.options_calls(
 ## Get all expiration dates
 expirations = td.get_options_expiration(
             symbol=var.pid().as_json()['dates'])
-time.sleep(60)
+time.sleep(5)
 #
 ## Extract only put options for the soonest expiration date...
 put_options = td.get_options_chain(
@@ -47,7 +44,7 @@ put_options = td.get_options_chain(
         ).as_json()['puts']
 sys.stdout = open(var.options_puts, "w")
 print(put_options)
-time.sleep(60)
+time.sleep(5)
 #
 # Extract only put options for the soonest expiration....
 put_options = td.get_options_chain(

@@ -3,10 +3,11 @@
 # Import App sys/env vars                                 #
 # Import Module and Run From Prompt                       #
 ############################################################
-# import seraph_vars
-import sys
+import modules
+from modules import *
+from seraph_vars import TOKEN1
 from seraph_vars import *
-import plotly.graph_objects as go  # or plotly.express as pxd
+import plotly.graph_objects as go  # or plotly.express as px
 import nasdaqdatalink
 import mplfinance as mf
 import pandas as pd
@@ -20,7 +21,7 @@ import json
 import requests
 import os
 import time
-import modules
+import sys
 # ADD UI CODE HERE ########################
 ## 1) Progress Bar
 ## 2) Image as URL
@@ -32,9 +33,7 @@ print("-----SERAPH------")
 print("-------is--------")
 print("-----loading-----")
 print("-----------------")
-time.sleep(5)
-print("Imported Vars and Modules....")
-time.sleep(2)
+
 ##############################################################
 # MAKE IMAGE DIR's
 ##############################################################
@@ -49,27 +48,24 @@ if not os.path.exists("data/images/time_series_plots/5min"):
     os.mkdir("data/images/time_series_plots/5min")
 if not os.path.exists("data/images/time_series_plots/15min"):
     os.mkdir("data/images/time_series_plots/15min")
-time.sleep(3)
 ################################################################
 # END OF SETUP
 # DEFINE VARS BY USER INPUT
-#
-time.sleep(3)
-
 ############################################
 # Twelvedata Token
-token_selected = input("What Token (TOKEN1,TOKEN2,TOKEN3,TOKEN4)?: ")
-print("Token Selected:" + token_selected)
+SELECTED_TOKEN = input("What Token:")
+f = open('selected_token.txt', "w")
+f.write(
+    SELECTED_TOKEN
+)
+f.close()
+td = TDClient(apikey=SELECTED_TOKEN)
+print("Imported Vars and Modules....")
+## TICKER SELECTION
+ticker_symbol = input("What Ticker:")
 # WRITE TO FILE
-sys.stdout_token = open('selected_token.txt', "w")
-print(token_selected)  # DO NOT UNCOMMENT
-# READING THE SELECTED TOKEN
-f = open('selected_token.txt', 'r')
-toksel = f.read()
-print("Token Selected:",
-      toksel
-      )
-td = TDClient(apikey=toksel)
-print("Imported API key....")
-time.sleep(3)
-print("MOVING ON...")
+f = open('seraph_pid.txt', "w")
+f.write(
+        ticker_symbol
+)
+f.close()
