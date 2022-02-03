@@ -1,0 +1,15 @@
+requests
+config
+numpy
+asyncio
+datetime
+scipy
+pandas
+matplotlib
+plotly
+twelvedata
+kaleido
+os
+pandas
+mplfinance
+Nasdaq-Data-Link
