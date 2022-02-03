@@ -20,7 +20,7 @@ f.write(
 f.close()
 # Charts
 stock = finvizfinance('amd')
-stock.TickerCharts(out_dir=finviz_asset & 'chart.png')
+stock.TickerCharts(out_dir='data/images')
 # Rename
 symbol = ticker_symbol
 imagename = "%s.png" % symbol
