@@ -20,15 +20,15 @@ import time
 import sys
 ###########################################
 # Twelvedata Token
-SELECTED_TOKEN = input("What Token:")
-f = open('selected_token.txt', "w")
-f.write(
-    SELECTED_TOKEN
-)
-f.close()
-td = TDClient(apikey=SELECTED_TOKEN)
-print("Imported Vars and Modules....")
+#selected_token = input("What Token:")
+
+#f = open('selected_token.txt', "w")
+#f.write(
+#        selected_token
+#)
+#f.close()
 #
+td = TDClient(apikey=TOKEN1)
 ## TICKER SELECTION
 ticker_symbol = input("What Ticker:")
 # WRITE TO FILE
@@ -50,7 +50,7 @@ f.close()
 ts = td.time_series(
         symbol=ticker_symbol,
         interval="1min",
-        outputsize=120,).with_vwap(interval=10).with_ema(time_period=24).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/1min/chart_1min_1.png")
+        outputsize=120,).with_vwap().with_ema(time_period=24).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/1min/chart_1min_1.png")
 ## Rename the image for organization
 symbol = ticker_symbol
 imagename = "%s_1min_1.png" % symbol
@@ -58,10 +58,9 @@ os.rename('data/images/time_series_plots/1min/chart_1min_1.png',
           "data/images/time_series_plots/1min/%s_1min_1.png" % symbol)
 time.sleep(30)
 # For Testing
-# print(imagename)
+print(imagename)
 
 # TIME SERIES CHAIN IMAGE CREATION
-time.sleep(30)
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="1min",
@@ -72,65 +71,73 @@ imagename = "%s_1min_2.png" % symbol
 os.rename('data/images/time_series_plots/1min/chart_1min_2.png',
           "data/images/time_series_plots/1min/%s_1min_2.png" % symbol)
 time.sleep(30)
+print(imagename)
 # Construct the necessary time series
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="5min",
-                  outputsize=150,).with_vwap(interval=10).with_ema(time_period=72).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/5min/chart_5min_1.png")
+                  outputsize=50,).with_vwap().with_ema(time_period=72).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/5min/chart_5min_1.png")
 symbol = ticker_symbol
 imagename = "%s_5min_1.png" % symbol
 os.rename('data/images/time_series_plots/5min/chart_5min_1.png',
           "data/images/time_series_plots/5min/%s_5min_1.png" % symbol)
 time.sleep(30)
+print(imagename)
 # Construct the necessary time series
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="5min",
-                  outputsize=150,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/5min/chart_5min_2.png")
+                  outputsize=50,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/5min/chart_5min_2.png")
 symbol = ticker_symbol
 imagename = "%s_5min_2.png" % symbol
 os.rename('data/images/time_series_plots/5min/chart_5min_2.png',
           "data/images/time_series_plots/5min/%s_5min_2.png" % symbol)
 time.sleep(30)
+print(imagename)
 # Construct the necessary time series
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="15min",
-                  outputsize=45,).with_vwap(interval=10).with_ema(time_period=128).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/15min/chart_15min_1.png")
+                  outputsize=45,).with_vwap().with_ema(time_period=128).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/15min/chart_15min_1.png")
 symbol = ticker_symbol
-imagename = "%s_5min_2.png" % symbol
+imagename = "%s_15min_2.png" % symbol
 os.rename('data/images/time_series_plots/15min/chart_15min_1.png',
           "data/images/time_series_plots/15min/%s_15min_1.png" % symbol)
+time.sleep(30)
+print(imagename)
 # Construct the necessary time series
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="15min",
                   outputsize=45,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/15min/chart_15min_2.png")
 symbol = ticker_symbol
-imagename = "%s_5min_2.png" % symbol
+imagename = "%s_15min_2.png" % symbol
 os.rename('data/images/time_series_plots/15min/chart_15min_2.png',
           "data/images/time_series_plots/15min/%s_15min_2.png" % symbol)
 time.sleep(30)
+print(imagename)
 # Construct the necessary time series
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="30min",
-                  outputsize=45,).with_vwap(interval=10).with_ema(time_period=24).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/30min/chart_30min_1.png")
+                  outputsize=35,).with_vwap().with_ema(time_period=24).with_floor().as_plotly_figure().write_image("data/images/time_series_plots/30min/chart_30min_1.png")
 symbol = ticker_symbol
-imagename = "%s_5min_2.png" % symbol
+imagename = "%s_30min_1.png" % symbol
 os.rename('data/images/time_series_plots/30min/chart_30min_1.png',
           "data/images/time_series_plots/30min/%s_30min_1.png" % symbol)
 time.sleep(30)
+print(imagename)
 # Construct the necessary time series
 ts = td.time_series(
                   symbol=ticker_symbol,
                   interval="30min",
-                  outputsize=45,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/30min/chart_30min_2.png")
+                  outputsize=35,).with_stochrsi().with_bbands().with_percent_b().as_plotly_figure().write_image("data/images/time_series_plots/30min/chart_30min_2.png")
 symbol = ticker_symbol
-imagename = "%s_5min_2.png" % symbol
+imagename = "%s_30min_2.png" % symbol
 os.rename('data/images/time_series_plots/30min/chart_30min_2.png',
           "data/images/time_series_plots/30min/%s_30min_2.png" % symbol)
 time.sleep(30)
+print(imagename)
 
 
 print("Finished Plotting")
