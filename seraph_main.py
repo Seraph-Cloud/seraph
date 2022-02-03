@@ -53,19 +53,9 @@ time.sleep(3)
 ################################################################
 # END OF SETUP
 # DEFINE VARS BY USER INPUT
-ticker_symbol = input("What Ticker: (Please Write In Quotes 'XXX'):")
-print("Ticker is:" + ticker_symbol)
-sys.stdout_pid = open('seraph_pid.txt', "w")
-print(ticker_symbol)
+#
 time.sleep(3)
-# NOW WE MOVE TO STRUCTURE FORMATION OF APPLICATION
-# twelvedata token
-#token_selected = input("What Token: (TOKEN1,TOKEN2,TOKEN3,TOKEN4)")
-#print("Token Selected: " + token_selected)
-#sys.stdout = open('selected_token.txt', "w")
-#print(token_selected)
-#td = TDClient(apikey=token_selected)
-#time.sleep(3)
+
 ############################################
 # Twelvedata Token
 token_selected = input("What Token (TOKEN1,TOKEN2,TOKEN3,TOKEN4)?: ")
@@ -75,10 +65,11 @@ sys.stdout_token = open('selected_token.txt', "w")
 print(token_selected)  # DO NOT UNCOMMENT
 # READING THE SELECTED TOKEN
 f = open('selected_token.txt', 'r')
-toksel = f.read(seraph_vars)
+toksel = f.read()
 print("Token Selected:",
       toksel
       )
 td = TDClient(apikey=toksel)
 print("Imported API key....")
-time.sleep(10)
+time.sleep(3)
+print("MOVING ON...")
