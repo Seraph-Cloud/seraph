@@ -20,3 +20,4 @@ cufflinks
 bokeh
 bqplot
 finvizfinance
+stocker
