@@ -3,9 +3,7 @@
 # Import App sys/env vars                                 #
 # Import Module and Run From Prompt                       #
 ############################################################
-import modules
-from modules import *
-from seraph_vars import TOKEN1
+#from seraph_vars import TOKEN1
 from seraph_vars import *
 import plotly.graph_objects as go  # or plotly.express as px
 import nasdaqdatalink
@@ -22,15 +20,8 @@ import requests
 import os
 import time
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot
 # ADD UI CODE HERE ########################
-## 1) Progress Bar
-## 2) Image as URL
-## 3) Image as Interactive Chart / Figure
-## 4) Image as Web Page Embed
-## 5) Image as Ghost Webpost
+
 ###########################################
 print("-----SERAPH------")
 print("-------is--------")
