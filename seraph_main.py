@@ -4,6 +4,7 @@
 # Import Module and Run From Prompt                       #
 ############################################################
 #from seraph_vars import TOKEN1
+from modules import *
 from seraph_vars import *
 import plotly.graph_objects as go  # or plotly.express as px
 import nasdaqdatalink
@@ -42,6 +43,10 @@ if not os.path.exists("data/images/time_series_plots/5min"):
     os.mkdir("data/images/time_series_plots/5min")
 if not os.path.exists("data/images/time_series_plots/15min"):
     os.mkdir("data/images/time_series_plots/15min")
+# adding a folder to the system path
+# sys.path.insert(0, 'modules')
+#
+
 ################################################################
 # END OF SETUP
 # DEFINE VARS BY USER INPUT

@@ -17,3 +17,5 @@ pyqt5
 jupyter-lab
 chart_studio
 cufflinks
+bokeh
+bqplot
