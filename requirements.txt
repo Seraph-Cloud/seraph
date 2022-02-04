@@ -21,3 +21,5 @@ bokeh
 bqplot
 finvizfinance
 stocker
+bs4
+lxml

@@ -9,7 +9,6 @@ from finvizfinance.news import News
 from finvizfinance.screener.overview import Overview
 from seraph_vars import *
 import pandas as pd
-import stocker
 ## TICKER SELECTION
 ticker_symbol = input("What Ticker:")
 # WRITE TO FILE
@@ -19,10 +18,9 @@ f.write(
 )
 f.close()
 # Charts
-stock = finvizfinance('amd')
-stock.TickerCharts(out_dir='data/images')
+stock = finvizfinance(ticker_symbol)
+stock.ticker_charts(timeframe='daily', charttype='advanced',
+                    out_dir='data/images/finviz')
 # Rename
 symbol = ticker_symbol
 imagename = "%s.png" % symbol
-os.rename(finviz_asset & 'chart.png',
-          finviz_asset & "%s.png" % symbol)
