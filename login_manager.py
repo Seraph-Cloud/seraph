@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from flask import (_request_ctx_stack, abort, current_app, flash, redirect,
                    has_app_context, request, session)
 
-from .examples.flask_login.config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
+from flask_login.config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
                      COOKIE_HTTPONLY, COOKIE_SAMESITE, LOGIN_MESSAGE,
                      LOGIN_MESSAGE_CATEGORY, REFRESH_MESSAGE,
                      REFRESH_MESSAGE_CATEGORY, ID_ATTRIBUTE,

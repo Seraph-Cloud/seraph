@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-'''
-    flask_login.signals
-    -------------------
-    This module provides signals to get notified when Flask-Login performs
-    certain actions.
-'''
-
+# Seraph
+# Author: @diveyez
+# from flask_login @ https://github.com/maxcountryman/flask-login
 
 from flask.signals import Namespace
 

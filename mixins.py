@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-'''
-    flask_login.mixins
-    ------------------
-    This module provides mixin objects.
-'''
-
-
+# Seraph
+# Author: @diveyez
+# from flask_login @ https://github.com/maxcountryman/flask-login
 class UserMixin:
     '''
     This provides default implementations for the methods that Flask-Login
