@@ -9,3 +9,5 @@ def seraphAppLauncher():
     return "Seraph is loading..."
 def seraphBuild():
     return "Seraph is rebuilding indexes...", exec('seraph_main.py')
+def seraphWebAppLauncher():
+    return "Launching Web App on Localhost" # do stuff 
