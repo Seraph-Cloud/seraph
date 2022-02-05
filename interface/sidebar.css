@@ -1,0 +1,36 @@
+#boxleft {
+  background: black;
+  height: auto;
+  margin-left: -200;
+  width: 200px;
+  text-align: left;
+  position: fixed;
+  margin-top: -50px;
+
+}
+#boxright {
+  background: black;
+  height: auto;
+  margin-left: 1200;
+  width: 200px;
+  text-align: right;
+  position: fixed;
+  margin-top: -50px;
+
+}
+.column {
+    float: center;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}

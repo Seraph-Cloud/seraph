@@ -1,3 +1,8 @@
+from tkinter import *
+
+
+
+
 
 def menu():
     print("--------------Seraph Financials-------------------")
@@ -17,7 +22,7 @@ def menu():
     print("[D] Spinup The Dockers [INACTIVE]")
     print("-------------Authentication-----------------------")
     print("[T] Select Authentication Tokens")
-    print ("[0] Quit")
+    print("[0] Quit")
 menu()
 print()
 print("all data located in /data/ folder")

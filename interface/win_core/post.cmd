@@ -1,0 +1,1 @@
+java -Dauto=yes -Dc=<corename> -Ddata=files -Dfiletypes=xml,json,csv,pdf,doc,docx,ppt,pptx,xls,xlsx,odt,odp,ods,ott,otp,ots,rtf,htm,html,txt,log -Drecursive=yes -Dcommit=yes -Doptimize=yes -Dout=yes -jar post.jar D:\path\to\files/
