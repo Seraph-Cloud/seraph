@@ -1,9 +1,9 @@
 .env
-seraph_vars.py
+example.seraph_vars.py
 data/csv/*
 data/images/*
 data/json/*
-ticker-data/*
+data/ticker-data/*
 seraph_pid.txt
 selected_token.txt
 modules/__pycache__/*

@@ -20,7 +20,7 @@ f.close()
 # Charts
 stock = finvizfinance(ticker_symbol)
 stock.ticker_charts(timeframe='daily', charttype='advanced',
-                    out_dir='data/images/finviz')
+                    out_dir='data/images/daily/finviz')
 # Rename
 symbol = ticker_symbol
 imagename = "%s.png" % symbol
