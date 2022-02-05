@@ -1,36 +1,24 @@
-# app.py of Seraph
-# Author: @diveyez
+# app.py of Seraph #########################################
+# Author: @diveyez #########################################
 # Flask app configuration and launcher
-#from cProfile import run <- wheere is this from
-import sqlite3
-import flask
-from flask import Flask, render_template, request, url_for, flash, redirect, g, login
-from flask.sessions import SecureCookieSessionInterface
-import flask_login
-# aborts
-from werkzeug.exceptions import abort
 # connect to db first
-# we are using Sqlite and php for web coding with flask
-def get_db_connection():
-    conn = sqlite3.connect('data/db/database.db')
-    conn.row_factory = sqlite3.Row
-    return conn
-# 404
-def get_post(post_id):
-    conn = get_db_connection()
-    post = conn.execute('SELECT * FROM posts WHERE id = ?',
-                        (post_id,)).fetchone()
-    conn.close()
-    if post is None:
-        abort(404)
-    return post
-from seraph_main import *
+# we are using Sqlite for db with flask
+# the black hole application will have to be a Docker stack
+# FOR USING PHP *******************************************
+#  *  #def phpPages():
+#  *  #    out = sp.run(["php", "index.php"], stdout=sp.PIPE)
+#  *  #return out.stdout
+#from seraph_load import *
+from seraph_database import *
+from seraph_load import *
 def seraphAppLauncher():
-    return "Seraph is loading..."
+    return print("Seraph is loading...")
 def seraphBuild():
-    return "Seraph is rebuilding indexes...", exec('seraph_main.py')
+    return print("Seraph is rebuilding indexes..."), exec('seraph_main.py')
+# do stuff
 def seraphWebAppLauncher():
-    return "Launching Web App on Localhost" # do stuff 
+    return print("Launching Web App on Localhost") 
+# do stuff 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '-dsbI1HJft672.fd2y8'
 @app.route('/')
@@ -38,10 +26,7 @@ def index():
     conn = get_db_connection()
     posts = conn.execute('SELECT * FROM posts').fetchall()
     conn.close()
-    # FOR USING PHP
-    #def phpPages():
-    #    out = sp.run(["php", "index.php"], stdout=sp.PIPE)
-    #return out.stdout
+    
     return render_template('index.html', posts=posts), print("WebApp is active...")
 
 # PERMALINKS
