@@ -27,3 +27,4 @@ lxml
 opstrat
 kivy
 flask
+flask-login
