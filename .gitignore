@@ -17,3 +17,5 @@ stripe/server/package_lock.json
 .history
 .code
 .vscode
+.jpynb_checkpoints
+/examples/.jpynb_checkpoints
