@@ -11,7 +11,7 @@ import datetime # time/date
 ##### from modules import * # will eventually import all 
 # necessary python scripts as modules from ./modules
 from seraph_vars import * # variable here must be configured
-from seraph_ui import * #imports the vars and ui modules
+#from seraph_ui import * #imports the vars and ui modules
 from seraph_database import *
 from json import loads # required
 import json # required for api's
