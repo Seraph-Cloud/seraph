@@ -25,6 +25,8 @@ _configure example.seraph_vars.py as needed_
 -  OPSTRAT Python Scripting
 -  TOS Options TA & Webpage Generation
 -  Images Webpage Generation
+-  Finish UI
+-  Full Encryption
 -  Full Containerization
 
 
