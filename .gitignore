@@ -9,7 +9,6 @@ selected_token.txt
 modules/__pycache__/*
 modules/financial/dev/__pycache__/*
 __pycache__/*
-# Removing Test Junk
 modules/trash/*
 stripe/local-macos/*
 stripe/server/node_modules/*
@@ -21,4 +20,4 @@ stripe/server/package_lock.json
 .jpynb_checkpoints
 /examples/.jpynb_checkpoints
 .ui/*
-users.txt
+#users.txt

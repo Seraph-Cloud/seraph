@@ -1,6 +1,6 @@
 # Seraph UI
 # Author: @diveyez
-# using Kivy as a GUI
+# using Kivy as a GUI to control @ the hosting machine
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
