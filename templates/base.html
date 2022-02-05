@@ -36,10 +36,7 @@
             </ul>
         </div>
     </nav>
-    <form method="post" action="/PostStatus">
-        <input type="text" name="PostStatus"><br>
-        <button>Post Status</button>
-       </form>
+
     <div class="container">
         {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">{{ message }}</div>
