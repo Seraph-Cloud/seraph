@@ -1,26 +1,29 @@
 # Serpah Main Python File #################################
-# Author: @diveyez                                        #
-# Import App sys/env vars                                 #
-# Import Module and Run From Prompt                       #
-############################################################
+# Author: @diveyez github.com/diveyez diveyez.com #########
+# Import Resources ########################################
+# Import App sys/env vars #################################
+# Import Module and Run From Prompt #######################
+###########################################################
 #from seraph_vars import TOKEN1
-from modules import *
-from seraph_vars import *
+from modules import * # will eventually import all 
+# necessary python scripts as modules from ./modules
+from seraph_vars import * # imports the vars module
 import plotly.graph_objects as go  # or plotly.express as px
-import nasdaqdatalink
-import mplfinance as mf
-import pandas as pd
-from twelvedata import TDClient
-import plotly.express as px
-import plotly
-import plotly.io as pio
-import twelvedata
-from json import loads
-import json
-import requests
-import os
-import time
-import sys
+import nasdaqdatalink # nasda data packages for python
+import mplfinance as mf # finance libraries needed for charting and processing data
+import pandas as pd # required
+from twelvedata import TDClient #twelvedata.com's official packages
+import plotly.express as px # plot charts for usage with twelvedata
+import plotly # plotly main package
+import plotly.io as pio # import export
+import twelvedata # importing rest of twelvedata 
+# ^ not necessary after development and testing
+from json import loads # required
+import json # required for api's
+import requests # required for interaction and taking data
+import os # required for management of application and files
+import time # required for other modules
+import sys # required for dir creation and file management
 # ADD UI CODE HERE ########################
 
 ###########################################
@@ -45,21 +48,14 @@ if not os.path.exists("data/images/time_series_plots/15min"):
     os.mkdir("data/images/time_series_plots/15min")
 # adding a folder to the system path
 # sys.path.insert(0, 'modules')
-#
-
+# ^ do this after development of TDA and NASDAQ DL app
+#   DO NOT FORGET TO SETUP MODULES
+#   MNAKE SURE YOU DO THAT LAST
 ################################################################
 # END OF SETUP
 # DEFINE VARS BY USER INPUT
 ############################################
-# Twelvedata Token
-SELECTED_TOKEN = input("What Token:")
-f = open('selected_token.txt', "w")
-f.write(
-    SELECTED_TOKEN
-)
-f.close()
-td = TDClient(apikey=SELECTED_TOKEN)
-print("Imported Vars and Modules....")
+
 ## TICKER SELECTION
 ticker_symbol = input("What Ticker:")
 # WRITE TO FILE
@@ -68,3 +64,12 @@ f.write(
         ticker_symbol
 )
 f.close()
+# Twelvedata Token
+SELECTED_12dTOKEN = input("What TewlveData Token:")
+f = open('selected_token.txt', "w")
+f.write(
+    SELECTED_12dTOKEN
+)
+f.close()
+td = TDClient(apikey=SELECTED_12dTOKEN)
+print("Imported Vars and Modules....")

@@ -2,8 +2,7 @@
 **The Historical Information Dataminer Companion**
 
 _configure example.seraph_vars.py as needed_
--   (TOKEN1,TOKEN2,TOKEN3,TOKEN4)
-
+```mv examples.seraph_vars.py seraph_vars.py```
 # how the json from twelvedata looks
 
 ```json
