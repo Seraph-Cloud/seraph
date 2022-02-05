@@ -9,12 +9,13 @@ matplotlib
 plotly
 twelvedata
 kaleido
-os
+# sys
+# os
 pandas
 mplfinance
 Nasdaq-Data-Link
 pyqt5
-jupyter-lab
+# jupyter-lab
 chart_studio
 cufflinks
 bokeh
