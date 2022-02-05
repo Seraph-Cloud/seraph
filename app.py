@@ -3,6 +3,8 @@ from cProfile import run
 # Author: @diveyez
 # Flask app configuration and launcher
 import sqlite3 # required
+# import subprocess
+# for using PHP
 from flask import Flask, render_template
 # connect to db first
 # we are using Sqlite and php for web coding with flask
@@ -23,4 +25,8 @@ def index():
     conn = get_db_connection()
     posts = conn.execute('SELECT * FROM posts').fetchall()
     conn.close()
+    # FOR USING PHP
+    #def phpPages():
+    #    out = sp.run(["php", "index.php"], stdout=sp.PIPE)
+    #return out.stdout
     return render_template('index.html', posts=posts), print("WebApp is active...")
