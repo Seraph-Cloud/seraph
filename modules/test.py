@@ -1,15 +1,8 @@
 # TESTING SCRIPT WHERE ALL THINGS ARE TESTED
-#
-#from discord.ext.commands import Bot
-#from discord.ext import commands
-#from discord import Embed
-#import discord
 import requests
-#import asyncio
 import os
 import time
 import sys
-# JAVA SCRIPT OBJECT ORIENTATION
 import json
 from json import loads
 import twelvedata
@@ -25,9 +18,6 @@ import plotly.graph_objects as go  # or plotly.express as px
 fig = go.Figure()  # or any Plotly Express function e.g. px.bar(...)
 # fig.add_trace( ... )
 # fig.update_layout( ... )
-
-# SYSTEM STUFF
-# import dotenv
 # MAKE IMAGES DIR
 if not os.path.exists("data/images"):
     os.mkdir("data/images")
@@ -35,12 +25,8 @@ if not os.path.exists("data/csv"):
     os.mkdir("data/csv")
 if not os.path.exists("data/json"):
     os.mkdir("data/json")
-
 # TOKENS
-# twelvedata token R Neff
-#td = TDClient(apikey="991b6d046946451281a740fa21f4da61")
-# twelvedata token T Shull
-td = TDClient(apikey="3f2818aaa9ee4a7195e1237830de9876")
+td = TDClient(apikey="")
 #
 #api = td.api_usage()
 file_path = 'data/json/NFLX-options-calls.json'

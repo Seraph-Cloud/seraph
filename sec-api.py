@@ -1,8 +1,5 @@
 from sec_api import QueryApi
-from dotenv import load_dotenv
 import os
-env_path=os.path.join(‘env_var’, env_vars.txt)
-load_dotenv(env_path)
 queryApi = QueryApi(api_key="YOUR_API_KEY")
 #queryApi = QueryApi(api_key="<api_key_here>")
 query = {
@@ -15,5 +12,5 @@ query = {
 }
 
 filings = queryApi.get_filings(query)
-
+f = open
 print(filings)
