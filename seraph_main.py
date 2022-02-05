@@ -30,7 +30,7 @@ import sys # required for dir creation and file management
 print("-----SERAPH------")
 print("-------is--------")
 print("-----loading-----")
-print("-----------------")
+print("--------∆--------")
 
 ##############################################################
 # MAKE IMAGE DIR's
