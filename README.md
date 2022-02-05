@@ -6,7 +6,12 @@ _configure example.seraph_vars.py as needed_
 ```mv examples.seraph_vars.py seraph_vars.py```
 # Requirements
 -   docker docker-compose
--   python3+ python-tk 
+-   python3+ 
+
+# Local App Setup
+```bash 
+pip install -r requirements.txt
+```
 
 #  API Auth Tokens Required
 -   TwelveData

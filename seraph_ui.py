@@ -2,13 +2,20 @@
 # Author: @diveyez
 # using Kivy as a GUI
 from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
 from seraph_database import d_base
+# create a background class which inherits the boxlayout class
+class Background(BoxLayout):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+    pass
 
+        
 
 class CreateAccountWindow(Screen):
     namee = ObjectProperty(None)
@@ -109,7 +116,7 @@ sm.current = "login"
 class seraphApp(App):
     def build(self):
         return sm
-
+#        return Background()
 
 if __name__ == "__main__":
     seraphApp().run()

@@ -160,4 +160,22 @@
             text: "Log Out"
             on_release:
                 app.root.current = "login"
-                root.manager.transition.direction = "down"
+                root.manager.transition.direction = "down"                
+#<Background>:
+ #   id: MainWindow
+ #   orientation: "vertical"
+ #   spacing: 10
+ #   space_x: self.size[0]/3
+ #   canvas.before:
+ #       Color:
+ #           rgba: (1, 1, 1, 1)
+ #       Rectangle:
+ #           source:'back.jfif'
+ #           size: root.width, root.height
+ #           pos: self.pos
+ #       Button:
+ #           text: "Click Me"
+ #           pos_hint :{'center_x':0.2, 'center_y':0.2}
+ #           size_hint: .30, 0
+ #           background_color: (0.06, .36, .4, .675)
+ #           font_size: 4
