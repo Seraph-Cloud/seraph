@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-'''
-    flask_login.utils
-    -----------------
-    General utilities.
-'''
-
-
+# Seraph
+# Author: @diveyez
+# from flask_login @ https://github.com/maxcountryman/flask-login
 import hmac
 from hashlib import sha512
 from functools import wraps
@@ -16,7 +11,7 @@ from werkzeug.urls import url_decode, url_encode
 from flask import (_request_ctx_stack, current_app, request, session, url_for,
                    has_request_context)
 
-from .config import COOKIE_NAME, EXEMPT_METHODS
+from .examples.flask_login.config import COOKIE_NAME, EXEMPT_METHODS
 from .signals import user_logged_in, user_logged_out, user_login_confirmed
 
 

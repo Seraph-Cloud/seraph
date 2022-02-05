@@ -1,18 +1,13 @@
-# -*- coding: utf-8 -*-
-'''
-    flask_login.login_manager
-    -------------------------
-    The LoginManager class.
-'''
-
-
+# Seraph
+# Author: @diveyez
+# from flask_login @ https://github.com/maxcountryman/flask-login
 import warnings
 from datetime import datetime, timedelta
 
 from flask import (_request_ctx_stack, abort, current_app, flash, redirect,
                    has_app_context, request, session)
 
-from .config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
+from .examples.flask_login.config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
                      COOKIE_HTTPONLY, COOKIE_SAMESITE, LOGIN_MESSAGE,
                      LOGIN_MESSAGE_CATEGORY, REFRESH_MESSAGE,
                      REFRESH_MESSAGE_CATEGORY, ID_ATTRIBUTE,

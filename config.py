@@ -1,19 +1,13 @@
-# -*- coding: utf-8 -*-
-'''
-    flask_login.config
-    ------------------
-    This module provides default configuration values.
-'''
-
-
+# Seraph
+# Author: @diveyez
+# Configuration for flask_login
 from datetime import timedelta
-
 
 #: The default name of the "remember me" cookie (``remember_token``)
 COOKIE_NAME = 'remember_token'
 
 #: The default time before the "remember me" cookie expires (365 days).
-COOKIE_DURATION = timedelta(days=365)
+COOKIE_DURATION = timedelta(days=7)
 
 #: Whether the "remember me" cookie requires Secure; defaults to ``False``
 COOKIE_SECURE = False
@@ -61,4 +55,4 @@ EXEMPT_METHODS = set(['OPTIONS'])
 #: If true, the page the user is attempting to access is stored in the session
 #: rather than a url parameter when redirecting to the login view; defaults to
 #: ``False``.
-USE_SESSION_FOR_NEXT = False
+USE_SESSION_FOR_NEXT = True

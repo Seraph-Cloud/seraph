@@ -1,15 +1,8 @@
-# -*- coding: utf-8 -*-
-'''
-    flask_login
-    -----------
-    This module provides user session management for Flask. It lets you log
-    your users in and out in a database-independent manner.
-    :copyright: (c) 2011 by Matthew Frazier.
-    :license: MIT/X11, see LICENSE for more details.
-'''
-
-from .__about__ import __version__
-from .config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
+# Seraph
+# Author: @diveyez
+# from flask_login @ https://github.com/maxcountryman/flask-login
+from .examples.flask_login.__about__ import __version__
+from .examples.flask_login.config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
                      COOKIE_HTTPONLY, LOGIN_MESSAGE, LOGIN_MESSAGE_CATEGORY,
                      REFRESH_MESSAGE, REFRESH_MESSAGE_CATEGORY, ID_ATTRIBUTE,
                      AUTH_HEADER_NAME)
