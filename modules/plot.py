@@ -9,6 +9,7 @@ import time
 import sys
 print("Working... Please be patient...")
 df = px.data.stocks(indexed=True)-1
+# replace this with something that is not test data
 fig = px.area(df, facet_col="company", facet_col_wrap=2)
 fig.write_image(chart_test)
 print("Finished, the image is in '../data/images/grid_plots'")
