@@ -1,5 +1,5 @@
 # seraph_database.py
-from seraph_load import *
+#from seraph_load import *
 class d_base:
     def __init__(self, filename):
         self.filename = filename

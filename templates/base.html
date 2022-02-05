@@ -19,6 +19,7 @@
     </style>
   </head>
   <body>
+      <img src=""></img>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="{{ url_for('index')}}">Seraph</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,11 +31,15 @@
                 <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url_for('create')}}">New Post</a>
+                <a class="nav-link" href="#">New Post</a>
             </li>
             </ul>
         </div>
     </nav>
+    <form method="post" action="/PostStatus">
+        <input type="text" name="PostStatus"><br>
+        <button>Post Status</button>
+       </form>
     <div class="container">
         {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">{{ message }}</div>
@@ -47,6 +52,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
   <div id="footer"><center>
+    
     <h5> <a href="https://github.com/diveyez"> Seraph & Black Hole</a> written by <a href="https://github.com/diveyez/">Diveyez</a></p>&copy; ® 2016 - 2023</h5>
                     <h5>Los Angeles, California <a href="https://titantrades.com">TitanTrades.com</a></h5>
                     <img src=""</img>

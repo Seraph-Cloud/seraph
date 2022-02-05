@@ -6,8 +6,6 @@
 ###########################################################
 # all of this is listed in requirements.txt
 # rersources load from module seraph_load.py
-import sys
-import os
 # from seraph_load import *
 # ADD Standalone UI CODE HERE ########################
 #
@@ -16,6 +14,11 @@ print("-----SERAPH------")
 print("-------is--------")
 print("-----loading-----")
 print("--------∆--------")
+# adding the modules path
+sys.path.insert(0, 'modules')
+sys.path.insert(0, 'seraph_blackhole')
+sys.path.insert(0, 'seraph_standalone')
+sys.path.insert(0, 'data')
 
 ##############################################################
 # MAKE IMAGE DIR's
@@ -42,10 +45,7 @@ if not os.path.exists("data/json"):
 if not os.path.exists("data/ticker-data"):
     os.mkdir("data/ticker-data")
     print("----------------∆:100%")
-# adding the modules path
-sys.path.insert(0, 'modules')
-sys.path.insert(0, 'seraph_blackhole')
-sys.path.insert(0, 'seraph_standalone')
+
 #sys.path.insert(0, 'seraph_login')
 #sys.path.insert(0, '<pathname')
 ################################################################

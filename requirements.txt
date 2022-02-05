@@ -28,3 +28,4 @@ opstrat
 kivy
 flask
 flask-login
+LoginForm
