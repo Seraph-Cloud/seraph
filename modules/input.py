@@ -27,6 +27,9 @@ from seraph_vars import *
 data_dir = r'data'
 data_csv_dir = r'data/csv'
 data_db_dir = r'data/db'
+data_json_dir = r'data/json'
+data_ticker_data_dir = r'data/ticker-data'
+data_lists = r'data/lists'
 data_images_dir = r'data/images'
 data_images_finviz_dir = r'data/images/finviz'
 data_images_time_series_plots_dir = r'data/images/time_series_plots'
@@ -34,15 +37,17 @@ data_images_time_series_plots_1min_dir = r'data/images/time_series_plots/1min'
 data_images_time_series_plots_5min_dir = r'data/images/time_series_plots/5min'
 data_images_time_series_plots__15min_dir = r'data/images/time_series_plots/15min'
 data_images_time_series_plots_30min_dir = r'data/images/time_series_plots/30min'
-data_images_time_series_plots_dir = r'data/images/time_series_plots'
-seraph_abs_path = os.path.join(base_dir, data_dir, data_csv_dir, data_db_dir, data_images_dir, data_images_time_series_plots_dir )
+# Defines seraph_abs_path
+seraph_abs_path = os.path.join(base_dir, data_dir, data_csv_dir, data_db_dir, 
+                               data_json_dir, data_ticker_data_dir, data_lists,
+                                data_images_dir, data_images_time_series_plots_dir)
 # Example Defining
 # <something>_abs_path = os.path.join(base_dir, dir2, dir3)
 
 # Twelvedata Token
 SELECTED_12dTOKEN = input("What Token:")
 # Write to file
-f = with open(os.path.join())('selected_token.txt', "w")
+f = open(os.path.join(seraph_abs_path, r'selected_token.txt'), "r")
 f.write(
     SELECTED_12dTOKEN
 )

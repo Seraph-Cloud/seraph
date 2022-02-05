@@ -1,4 +1,5 @@
 # Seraph
+
 **The Historical Information Dataminer Companion**
 
 _configure example.seraph_vars.py as needed_
