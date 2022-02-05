@@ -40,6 +40,7 @@ f = open(os.path.join(seraph_abs_path, r'selected_token.txt'), "r")
 f.read()
 
 SELECTED_12dTOKEN =  print(f)
+
 # PRINT FORM FILE HERE
 td = TDClient(apikey=SELECTED_12dTOKEN)
 
