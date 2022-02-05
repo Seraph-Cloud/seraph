@@ -34,10 +34,11 @@ from flask.sessions import SecureCookieSessionInterface
 # aborts
 from werkzeug.exceptions import abort
 # import seraph_login # a modified version of flask_login
-# from flask_login import * # making sure the parts are loaded, again
-from cProfile import run
-
-from loginm_manager import *
-from mixins import *
-from utils import *
-from signals import *
+from flask_login import * 
+# # making sure the parts are loaded, again
+#from cProfile import run
+#from login_manager import *
+#from mixins import *
+#from utils import *
+#from signals import *
+import importlib

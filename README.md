@@ -7,7 +7,7 @@ _configure example.seraph_vars.py as needed_
 # Requirements
 -   docker docker-compose
 -   python3+ flask
-
+-   wsgi serer
 # Local App Setup
 
 # Development

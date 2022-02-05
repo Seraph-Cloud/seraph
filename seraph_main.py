@@ -6,8 +6,9 @@
 ###########################################################
 # all of this is listed in requirements.txt
 # rersources load from module seraph_load.py
-# 
-from seraph_load import *
+import sys
+import os
+# from seraph_load import *
 # ADD Standalone UI CODE HERE ########################
 #
 ###########################################
@@ -45,7 +46,7 @@ if not os.path.exists("data/ticker-data"):
 sys.path.insert(0, 'modules')
 sys.path.insert(0, 'seraph_blackhole')
 sys.path.insert(0, 'seraph_standalone')
-sys.path.insert(0, 'seraph_login')
+#sys.path.insert(0, 'seraph_login')
 #sys.path.insert(0, '<pathname')
 ################################################################
 # MAKE THINGS HAPPEN BEFORE WEBAPP LAUNCH HERE
