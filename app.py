@@ -6,12 +6,23 @@ import sqlite3 # required
 # import subprocess
 # for using PHP
 from flask import Flask, render_template
+# aborts
+from werkzeug.exceptions import abort
 # connect to db first
 # we are using Sqlite and php for web coding with flask
 def get_db_connection():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('data/db/database.db')
     conn.row_factory = sqlite3.Row
     return conn
+# 404
+def get_post(post_id):
+    conn = get_db_connection()
+    post = conn.execute('SELECT * FROM posts WHERE id = ?',
+                        (post_id,)).fetchone()
+    conn.close()
+    if post is None:
+        abort(404)
+    return post
 from seraph_main import *
 def seraphAppLauncher():
     return "Seraph is loading..."

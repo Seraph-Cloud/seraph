@@ -54,13 +54,13 @@ sys.path.insert(0, 'modules')
 ############################################
 
 ## TICKER SELECTION
-ticker_symbol = input("What Ticker:")
+#ticker_symbol = input("What Ticker:")
 # WRITE TO FILE
-f = open('seraph_pid.txt', "w")
-f.write(
-        ticker_symbol
-)
-f.close()
+#f = open('seraph_pid.txt', "w")
+#f.write(
+#        ticker_symbol
+#)
+#f.close()
 # Twelvedata Token
 SELECTED_12dTOKEN = input("What TewlveData Token:")
 f = open('selected_token.txt', "w")
@@ -70,5 +70,5 @@ f.write(
 f.close()
 td = TDClient(apikey=SELECTED_12dTOKEN)
 print("Imported Vars and Modules....")
-
+#
 # MOVE THE ABOVE TO UI AFTER DEVELOPMENT
