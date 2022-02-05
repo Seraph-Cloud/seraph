@@ -1,3 +1,4 @@
+
 def menu():
     print("--------------Seraph Financials-------------------")
     print("[1] 1,5,15,30 min Plotly Charts (with TwelveData) ")
