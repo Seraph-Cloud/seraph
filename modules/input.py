@@ -21,9 +21,13 @@ import sys
 drive, tcase_dir = os.path.splitdrive(os.path.abspath(__file__))
 paths = tcase_dir.split(os.sep)[:-2]
 base_dir = os.path.join(drive,os.sep,*paths)
+data_dir = r'data'
+data_csv_dir = r'data/csv'
+data_db = r'data/db'
+images_dir = r'data/images'
 
 # Twelvedata Token
-SELECTED_TOKEN = input("What Token:")
+SELECTED_12dTOKEN = input("What Token:")
 # Write to file
 f = open('selected_token.txt', "w")
 f.write(
