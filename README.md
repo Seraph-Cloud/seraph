@@ -3,7 +3,6 @@
 
 _configure example.seraph_vars.py as needed_
 ```mv examples.seraph_vars.py seraph_vars.py```
-# how the json from twelvedata looks
 
 
 # Current Integrations
@@ -22,6 +21,8 @@ _configure example.seraph_vars.py as needed_
 -  Images Webpage Generation
 -  Full Containerization
 
+
+# how the json from twelvedata looks
 ```json
 [
   {
