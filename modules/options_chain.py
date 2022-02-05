@@ -11,7 +11,7 @@ import twelvedata
 from twelvedata import TDClient
 import sys
 drive, tcase_dir = os.path.splitdrive(os.path.abspath(__file__))
-paths = tcase_dir.split(os.sep)[:-2]
+paths = tcase_dir.split(os.sep)[:-1]
 base_dir = os.path.join(drive,os.sep,*paths)
 # Get PID
 from seraph_vars import *
@@ -19,27 +19,17 @@ data_dir = r'data'
 data_csv_dir = r'data/csv'
 data_db_dir = r'data/db'
 data_json_dir = r'data/json'
-data_ticker_data_dir = r'data/ticker-data'
-data_lists = r'data/lists'
-data_images_dir = r'data/images'
-data_images_finviz_dir = r'data/images/finviz'
-data_images_time_series_plots_dir = r'data/images/time_series_plots'
-data_images_time_series_plots_1min_dir = r'data/images/time_series_plots/1min'
-data_images_time_series_plots_5min_dir = r'data/images/time_series_plots/5min'
-data_images_time_series_plots__15min_dir = r'data/images/time_series_plots/15min'
-data_images_time_series_plots_30min_dir = r'data/images/time_series_plots/30min'
+
 # Defines seraph_abs_path
 seraph_abs_path = os.path.join(base_dir, data_dir, data_csv_dir, data_db_dir, 
-                               data_json_dir, data_ticker_data_dir, data_lists,
-                                data_images_dir, data_images_time_series_plots_dir)
+                               data_json_dir)
 # Example Defining
 # <something>_abs_path = os.path.join(base_dir, dir2, dir3)
 
 def get_tid(data):
     data = open(data, "r")
-get_pid = open('seraph_pid.txt')
-# not needed now?
-# # print(get_pid)
+get_pid = open(os.path.join(seraph_abs_path, r'seraph_pid.txt'), "r")
+get_pid.read()
 pid = print(get_pid)
 
 # JAVA SCRIPT OBJECT ORIENTATION
@@ -47,6 +37,10 @@ if not os.path.exists("data/json"):
     os.mkdir("data/json")
 # TOKENS
 f = open(os.path.join(seraph_abs_path, r'selected_token.txt'), "r")
+f.read()
+
+SELECTED_12dTOKEN =  print(f)
+# PRINT FORM FILE HERE
 td = TDClient(apikey=SELECTED_12dTOKEN)
 
 path_calls = var.options_calls(
