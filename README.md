@@ -14,6 +14,7 @@ _configure example.seraph_vars.py as needed_
 # TODO
 -  TDA Developer Tools
 -  NASDAQ Datalink
+-  SecAPI
 -  Plotter 3d Market Datalink
 -  Webull Developer Tools
 -  OPSTRAT Python Scripting
