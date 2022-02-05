@@ -5,6 +5,11 @@ _configure example.seraph_vars.py as needed_
 ```mv examples.seraph_vars.py seraph_vars.py```
 # how the json from twelvedata looks
 
+# TODO
+-  TDA Developer Tools
+-  NASDAQ Datalink
+
+
 ```json
 [
   {
