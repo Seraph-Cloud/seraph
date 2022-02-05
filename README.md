@@ -5,10 +5,21 @@ _configure example.seraph_vars.py as needed_
 ```mv examples.seraph_vars.py seraph_vars.py```
 # how the json from twelvedata looks
 
+
+# Current Integrations
+
+-   twelvedata charts/data
+-   yahoo data
+-   finviz charts/data
+
 # TODO
 -  TDA Developer Tools
 -  NASDAQ Datalink
-
+-  Plotter 3d Market Datalink
+-  Webull Developer Tools
+-  TOS Options TA & Webpage Generation
+-  Images Webpage Generation
+-  Full Containerization
 
 ```json
 [
