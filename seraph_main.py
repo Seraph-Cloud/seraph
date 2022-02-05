@@ -46,11 +46,8 @@ if not os.path.exists("data/images/time_series_plots/5min"):
     os.mkdir("data/images/time_series_plots/5min")
 if not os.path.exists("data/images/time_series_plots/15min"):
     os.mkdir("data/images/time_series_plots/15min")
-# adding a folder to the system path
-# sys.path.insert(0, 'modules')
-# ^ do this after development of TDA and NASDAQ DL app
-#   DO NOT FORGET TO SETUP MODULES
-#   MNAKE SURE YOU DO THAT LAST
+# adding the modules path
+sys.path.insert(0, 'modules')
 ################################################################
 # END OF SETUP
 # DEFINE VARS BY USER INPUT
