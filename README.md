@@ -9,6 +9,8 @@ _configure example.seraph_vars.py as needed_
 -   python3+ flask
 
 # Local App Setup
+
+# Development
 ```bash 
 pip install -r requirements.txt
 export FLASK_APP=seraphApp

@@ -1,11 +1,13 @@
-from cProfile import run
 # app.py of Seraph
 # Author: @diveyez
 # Flask app configuration and launcher
+#from cProfile import run <- wheere is this from
 import sqlite3 # required
 # import subprocess
 # for using PHP
-from flask import Flask, render_template
+import sqlite3
+from flask import Flask, render_template, request, url_for, flash, redirect
+from werkzeug.exceptions import abort
 # aborts
 from werkzeug.exceptions import abort
 # connect to db first
@@ -41,3 +43,8 @@ def index():
     #    out = sp.run(["php", "index.php"], stdout=sp.PIPE)
     #return out.stdout
     return render_template('index.html', posts=posts), print("WebApp is active...")
+
+@app.route('/<int:post_id>')
+def post(post_id):
+    post = get_post(post_id)
+    return render_template('post.html', post=post)
