@@ -17,6 +17,7 @@ _configure example.seraph_vars.py as needed_
 -  NASDAQ Datalink
 -  Plotter 3d Market Datalink
 -  Webull Developer Tools
+-  OPSTRAT Python Scripting
 -  TOS Options TA & Webpage Generation
 -  Images Webpage Generation
 -  Full Containerization
