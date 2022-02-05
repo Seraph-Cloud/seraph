@@ -4,9 +4,7 @@
 # into python and maskes a very quick way to
 # dockerize this as a web application
 from tkinter import *
+# reach the internet
+import webbrowser
 # Constructing the UI
-root = Tk()
-UIVersion = Label (root, text="Seraph 0.1.0")
-UIVersion.pack()
-root.mainloop()
-quit()
+
