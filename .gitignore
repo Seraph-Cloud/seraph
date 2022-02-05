@@ -14,3 +14,6 @@ stripe/local-macos/*
 stripe/server/node_modules/*
 stripe/server/package_lock.json
 /.plotly/.credentials
+.history
+.code
+.vscode
