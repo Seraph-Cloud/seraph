@@ -25,3 +25,4 @@ stocker
 bs4
 lxml
 opstrat
+kivy
