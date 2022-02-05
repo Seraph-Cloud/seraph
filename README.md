@@ -13,8 +13,10 @@ _configure example.seraph_vars.py as needed_
 # Development
 ```bash 
 pip install -r requirements.txt
-export FLASK_APP=seraphApp
+export FLASK_APP=app
 export FLASK_ENV=development
+python3 init-db.py
+flask run -p <port number>
 ```
 # Login Source
 [https://github.com/maxcountryman/flask-login](https://github.com/maxcountryman/flask-login)

@@ -1,8 +1,8 @@
 # Seraph
 # Author: @diveyez
 # from flask_login @ https://github.com/maxcountryman/flask-login
-from .examples.flask_login.__about__ import __version__
-from .examples.flask_login.config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
+from flask_login.__about__ import __version__
+from flask_login.config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
                      COOKIE_HTTPONLY, LOGIN_MESSAGE, LOGIN_MESSAGE_CATEGORY,
                      REFRESH_MESSAGE, REFRESH_MESSAGE_CATEGORY, ID_ATTRIBUTE,
                      AUTH_HEADER_NAME)
