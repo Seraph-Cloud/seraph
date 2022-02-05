@@ -45,6 +45,7 @@ if not os.path.exists("data/ticker-data"):
 sys.path.insert(0, 'modules')
 sys.path.insert(0, 'seraph_blackhole')
 sys.path.insert(0, 'seraph_standalone')
+sys.path.insert(0, 'seraph_login')
 #sys.path.insert(0, '<pathname')
 ################################################################
 # MAKE THINGS HAPPEN BEFORE WEBAPP LAUNCH HERE

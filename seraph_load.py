@@ -8,7 +8,7 @@ import time # required for other modules
 import sys # required for dir creation and file management
 import sqlite3 # database for logins and session storagte
 import datetime # time/date
-from modules import * # will eventually import all 
+##### from modules import * # will eventually import all 
 # necessary python scripts as modules from ./modules
 from seraph_vars import * # variable here must be configured
 from seraph_ui import * #imports the vars and ui modules
@@ -29,11 +29,11 @@ import plotly.io as pio # import export
 import plotly.express as px # plot charts for usage with twelvedata
 # FLASH APP FOR WEBAPPS
 import flask 
-from flask import Flask, render_template, request, url_for, flash, redirect, g, login
+from flask import Flask, render_template, request, url_for, flash, redirect, g
 from flask.sessions import SecureCookieSessionInterface
 # aborts
 from werkzeug.exceptions import abort
-import seraph_login # a modified version of flask_login
-from seraph_login import * # making sure the parts are loaded, again
+# import seraph_login # a modified version of flask_login
+from flask_login import * # making sure the parts are loaded, again
 #from cProfile import run <- wheere is this from
 

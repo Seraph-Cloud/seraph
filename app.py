@@ -9,7 +9,8 @@
 #  *  #    out = sp.run(["php", "index.php"], stdout=sp.PIPE)
 #  *  #return out.stdout
 #from seraph_load import *
-from seraph_database import *
+#from seraph_database import *
+import seraph_load
 from seraph_load import *
 def seraphAppLauncher():
     return print("Seraph is loading...")
