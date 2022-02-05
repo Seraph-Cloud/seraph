@@ -2,12 +2,11 @@
 # Author: @diveyez
 # Flask app configuration and launcher
 #from cProfile import run <- wheere is this from
-import sqlite3 # required
-# import subprocess
-# for using PHP
 import sqlite3
-from flask import Flask, render_template, request, url_for, flash, redirect, login
-from werkzeug.exceptions import abort
+import flask
+from flask import Flask, render_template, request, url_for, flash, redirect, g, login
+from flask.sessions import SecureCookieSessionInterface
+import flask_login
 # aborts
 from werkzeug.exceptions import abort
 # connect to db first
@@ -99,16 +98,18 @@ def delete(id):
     flash('"{}" was successfully deleted!'.format(post['title']))
     return redirect(url_for('index'))
 # AUTHENTICATION CODE
-login_manager = LoginManager()
+login_manager = flask_login.login_manager()
 login_manager.init_app(app)
 login_manager.login_view = "users.login"
 login_manager.login_message = u"You must be logged in to view this page."
 login_manager.login_message_category = "info"
-login_manager.anonymous_user = guest
+login_manager.anonymous_user = 'Anonymous'
 login_manager.refresh_view = "accounts.reauthenticate"
 login_manager.needs_refresh_message = (
     u"To protect your account, please reauthenticate to access this page."
 )
+# SESSION SEC
+login_manager.session_protection = "strong"
 login_manager.needs_refresh_message_category = "info"
 @login_manager.user_loader
 # FUNCTIONS
@@ -174,3 +175,24 @@ def load_user(user_id):
     return User.query.filter_by(alternative_id=user_id).first()
 def get_id(self):
     return unicode(self.alternative_id)
+class CustomSessionInterface(SecureCookieSessionInterface):
+    """Prevent creating session from API requests."""
+    def save_session(self, *args, **kwargs):
+        if g.get('login_via_header'):
+            return
+        return super(CustomSessionInterface, self).save_session(*args,
+                                                                **kwargs)
+
+app.session_interface = CustomSessionInterface()
+
+@user_loaded_from_header.connect
+def user_loaded_from_header(self, user=None):
+    g.login_via_header = True
+# RESTRICTING POSTS
+@app.route('/post')
+@login_required
+def post():
+    pass
+# FOR RESTICTING ONLY CERTAIN PARTS OF THE WEBAPP
+# if not current_user.is_authenticated:
+#    return current_app.login_manager.unauthorized()
