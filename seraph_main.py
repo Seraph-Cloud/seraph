@@ -5,27 +5,11 @@
 # Import Module and Run From Prompt #######################
 ###########################################################
 # all of this is listed in requirements.txt
-from modules import * # will eventually import all 
-# necessary python scripts as modules from ./modules
-from seraph_vars import * # imports the vars module
-import plotly.graph_objects as go  # or plotly.express as px
-import nasdaqdatalink # nasda data packages for python
-import mplfinance as mf # finance libraries needed for charting and processing data
-import pandas as pd # required
-from twelvedata import TDClient #twelvedata.com's official packages
-import plotly.express as px # plot charts for usage with twelvedata
-import plotly # plotly main package
-import plotly.io as pio # import export
-import twelvedata # importing rest of twelvedata 
-# ^ not necessary after development and testing
-from json import loads # required
-import json # required for api's
-import requests # required for interaction and taking data
-import os # required for management of application and files
-import time # required for other modules
-import sys # required for dir creation and file management
-# ADD UI CODE HERE ########################
-
+# rersources load from module seraph_load.py
+# 
+from seraph_load import *
+# ADD Standalone UI CODE HERE ########################
+#
 ###########################################
 print("-----SERAPH------")
 print("-------is--------")
@@ -49,26 +33,21 @@ if not os.path.exists("data/images/time_series_plots/15min"):
 # adding the modules path
 sys.path.insert(0, 'modules')
 ################################################################
-# END OF SETUP
-# DEFINE VARS BY USER INPUT
-############################################
+# MAKE THINGS HAPPEN BEFORE WEBAPP LAUNCH HERE
+# IE: pull data and charts for the webapp on loops set to timers
 
-## TICKER SELECTION
-#ticker_symbol = input("What Ticker:")
-# WRITE TO FILE
-#f = open('seraph_pid.txt', "w")
-#f.write(
-#        ticker_symbol
-#)
-#f.close()
-# Twelvedata Token
-SELECTED_12dTOKEN = input("What TewlveData Token:")
-f = open('selected_token.txt', "w")
-f.write(
-    SELECTED_12dTOKEN
-)
-f.close()
-td = TDClient(apikey=SELECTED_12dTOKEN)
-print("Imported Vars and Modules....")
-#
-# MOVE THE ABOVE TO UI AFTER DEVELOPMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+# EOF ###
+#########
