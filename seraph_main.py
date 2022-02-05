@@ -4,7 +4,7 @@
 # Import App sys/env vars #################################
 # Import Module and Run From Prompt #######################
 ###########################################################
-#from seraph_vars import TOKEN1
+# all of this is listed in requirements.txt
 from modules import * # will eventually import all 
 # necessary python scripts as modules from ./modules
 from seraph_vars import * # imports the vars module
