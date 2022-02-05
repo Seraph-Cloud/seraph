@@ -6,15 +6,18 @@ _configure example.seraph_vars.py as needed_
 ```mv examples.seraph_vars.py seraph_vars.py```
 # Requirements
 -   docker docker-compose
--   python3+ 
+-   python3+ flask
 
 # Local App Setup
 ```bash 
 pip install -r requirements.txt
+export FLASK_APP=seraphApp
+export FLASK_ENV=development
 ```
 
 #  API Auth Tokens Required
 -   TwelveData
+*More Planned*
 # Current Integrations
 
 -   twelvedata charts/data

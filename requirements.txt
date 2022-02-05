@@ -26,3 +26,4 @@ bs4
 lxml
 opstrat
 kivy
+flask
