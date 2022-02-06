@@ -6,12 +6,12 @@ _configure example.seraph_vars.py as needed_
 ```mv examples.seraph_vars.py seraph_vars.py```
 # Requirements
 -   docker docker-compose
--   python3+ flask
+-   python3+ flask, django
 -   wsgi serer
 # Local App Setup
 
 # Development
-```bash 
+```bash
 pip install -r requirements.txt
 export FLASK_APP=app
 export FLASK_ENV=development

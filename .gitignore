@@ -20,4 +20,4 @@ stripe/server/package_lock.json
 .jpynb_checkpoints
 /examples/.jpynb_checkpoints
 .ui/*
-#users.txt
+users.txt

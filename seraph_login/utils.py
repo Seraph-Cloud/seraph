@@ -3,7 +3,7 @@
 # from flask_login @ https://github.com/maxcountryman/flask-login
 import hmac
 from hashlib import sha512
-from functools import wraps
+from functools import wraps 
 from urllib.parse import urlparse, urlunparse
 from werkzeug.local import LocalProxy
 from werkzeug.urls import url_decode, url_encode
@@ -11,7 +11,7 @@ from werkzeug.urls import url_decode, url_encode
 from flask import (_request_ctx_stack, current_app, request, session, url_for,
                    has_request_context)
 
-from flask_login.config import COOKIE_NAME, EXEMPT_METHODS
+from config import COOKIE_NAME, EXEMPT_METHODS
 from .signals import user_logged_in, user_logged_out, user_login_confirmed
 
 
