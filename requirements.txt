@@ -27,5 +27,6 @@ lxml
 opstrat
 kivy
 flask
-flask-login
+#flask-login
 LoginForm
+docker
