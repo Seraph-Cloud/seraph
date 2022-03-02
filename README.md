@@ -1,16 +1,17 @@
 # Seraph
 
-**The Historical Information Dataminer Companion**
+**Datamining Made Easy**
 
-_configure example.seraph_vars.py as needed_
-```mv examples.seraph_vars.py seraph_vars.py```
+_configure example.seraph_vars.py as needed_ `mv examples.seraph_vars.py seraph_vars.py`
+
 # Requirements
--   docker docker-compose
--   python3+ flask
--   wsgi serer
+
+-docker docker-compose -python3+ flask -wsgi serer
+
 # Local App Setup
 
 # Development
+
 ```bash
 pip install -r requirements.txt
 export FLASK_APP=app
@@ -18,32 +19,27 @@ export FLASK_ENV=development
 python3 init-db.py
 flask run -p <port number>
 ```
+
 # Login Source
-[https://github.com/maxcountryman/flask-login](https://github.com/maxcountryman/flask-login)
-#  API Auth Tokens Required
--   TwelveData
-*More Planned*
+
+<https://github.com/maxcountryman/flask-login>
+
+# API Auth Tokens Required
+
+-TwelveData -TDA Developer
+
+**More Planned**
+
 # Current Integrations
 
--   twelvedata charts/data
--   yahoo data
--   finviz charts/data
+-twelvedata charts/data -yahoo data -finviz charts/data
 
 # TODO
--  TDA Developer Tools
--  NASDAQ Datalink
--  SecAPI
--  Plotter 3d Market Datalink
--  Webull Developer Tools
--  OPSTRAT Python Scripting
--  TOS Options TA & Webpage Generation
--  Images Webpage Generation
--  Finish UI
--  Full Encryption
--  Full Containerization
 
+-TDA Developer Tools -NASDAQ Datalink -SecAPI -Plotter 3d Market Datalink -Webull Developer Tools -OPSTRAT Python Scripting -TOS Options TA & Webpage Generation -Images Webpage Generation -Finish UI -Full Encryption -Full Containerization
 
 # how the json from twelvedata looks
+
 ```json
 [
   {
@@ -87,6 +83,7 @@ print(url)
 ## YAHOO API endpoints
 
 The Yahoo Finance API provides 11 endpoints, each of which covers a specific feature that you can use:
+
 ```
 /v6/finance/quote - real time quote data for stocks, ETFs, mutuals funds, bonds, crypto and national currencies.
 /v7/finance/options - option chains data for a particular stock market company
@@ -101,24 +98,16 @@ The Yahoo Finance API provides 11 endpoints, each of which covers a specific fea
 /v1/finance/trending - trending stocks in a specific region
 ```
 
-
 ### Finviz Finance Documents
-[https://finvizfinance.readthedocs.io/en/latest/](https://finvizfinance.readthedocs.io/en/latest/)
+
+<https://finvizfinance.readthedocs.io/en/latest/>
 
 # SEC API
-All data comes from [SEC.gov](https://SEC.gov) through [https://sec-api.io](https://sec-api.io)
 
-*Examples and Reference Code*
-[github.com/janlukasschroeder/sec-api-python](https://github.com/janlukasschroeder/sec-api-python)
+All data comes from [SEC.gov](https://SEC.gov) through <https://sec-api.io>
 
+_Examples and Reference Code_ [github.com/janlukasschroeder/sec-api-python](https://github.com/janlukasschroeder/sec-api-python)
 
 # API URLs
 
-[Query API:](https://api.sec-api.io)
-[Stream API:](https://api.sec-api.io:3334/all-filings)
-[Full-Text Search API:](https://api.sec-api.io/full-text-search)
-[XBRL-to-JSON Converter API:](https://api.sec-api.io/xbrl-to-json)
-[10-K/Q Item Extractor API:](https://api.sec-api.io/extractor)
-[Filing Render & Download API:](https://api.sec-api.io/filing-reader)
-[CIK, Ticker, CUSIP Mapping API:](https://api.sec-api.io/mapping)
-[Executive Compensation API:](https://api.sec-api.io/compensation)
+[Query API:](https://api.sec-api.io) [Stream API:](https://api.sec-api.io:3334/all-filings) [Full-Text Search API:](https://api.sec-api.io/full-text-search) [XBRL-to-JSON Converter API:](https://api.sec-api.io/xbrl-to-json) [10-K/Q Item Extractor API:](https://api.sec-api.io/extractor) [Filing Render & Download API:](https://api.sec-api.io/filing-reader) [CIK, Ticker, CUSIP Mapping API:](https://api.sec-api.io/mapping) [Executive Compensation API:](https://api.sec-api.io/compensation)
