@@ -1,6 +1,0 @@
-BTC
-LTC
-ETH
-SOL
-XMR
-USDT
